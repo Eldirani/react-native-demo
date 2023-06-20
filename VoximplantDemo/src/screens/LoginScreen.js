@@ -97,7 +97,7 @@ export default class LoginScreen extends React.Component {
 
   loginClicked() {
     LoginManager.getInstance().loginWithPassword(
-      this.state.username + '.voximplant.com',
+      this.state.username + '@bconnect.bconnectmedical.n2.voximplant.com',
       this.password,
     );
   }

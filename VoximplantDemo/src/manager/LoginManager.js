@@ -25,6 +25,7 @@ export default class LoginManager {
     if (this.myInstance === null) {
       this.myInstance = new LoginManager();
     }
+    console.log('hereeee',this.client);
     return this.myInstance;
   }
 
@@ -50,6 +51,8 @@ export default class LoginManager {
     this.password = password;
     try {
       let state = await this.client.getClientState();
+      console.log('poppppp',this.client);
+      console.log('dasasdas',state)
       if (state === Voximplant.ClientState.DISCONNECTED) {
         await this.client.connect();
       }

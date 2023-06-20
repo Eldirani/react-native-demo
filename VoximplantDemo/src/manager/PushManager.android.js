@@ -68,6 +68,7 @@ class PushManager {
       id: 'default',
       name: 'Incoming calls',
       importance: AndroidImportance.HIGH,
+      sound: 'hollow',
     });
 
     await notifee.displayNotification({
@@ -75,6 +76,7 @@ class PushManager {
       body: `${from} is calling`,
       android: {
         channelId,
+        sound: 'hollow',
         smallIcon: 'ic_vox_notification',
         pressAction: {
           id: 'incoming_call',
